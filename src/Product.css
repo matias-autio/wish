@@ -1,0 +1,136 @@
+.product {
+  display: flex;
+  align-items: center;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  flex-direction: column;
+  min-height: min-content;
+}
+
+.product button {
+  text-transform: uppercase;
+}
+
+.product__image {
+  max-width: 50%;
+  padding-bottom: 1rem;
+}
+
+.product__info,
+.product__details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__description {
+  max-width: 16em;
+  padding-right: 1rem;
+}
+
+.product__name {
+  font-size: 2em;
+  padding-bottom: 1rem;
+}
+
+.product__price {
+  font-size: 2em;
+  /* text-align: right; */
+}
+
+.product.list-view {
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.product.list-view .product__image {
+  width: 40%;
+  padding-right: 0rem;
+}
+
+.product.list-view .product__quantity {
+  /* color: var(--pink); */
+  font-size: 1.5em;
+  width: 3em;
+  text-align: center;
+  border-radius: var(--border-radius-m);
+  border: 1px solid var(--dark-gray);
+  margin-right: 0.5rem;
+  pointer-events: none;
+}
+
+.product.list-view .product__details {
+  text-align: right;
+}
+
+.product__each {
+  font-size: 0.8em;
+}
+
+.product.list-view .product__container {
+  /* display: flex;
+  justify-content: space-between; */
+  min-width: initial;
+  width: 100%;
+}
+
+.product.list-view .product__buttons {
+  display: flex;
+  padding-bottom: 1rem;
+  /* justify-content: flex-end; */
+}
+
+.product.list-view .product__buttons button {
+  /* font-size: 0.8em; */
+  border: 0;
+  background-color: var(--light-gray);
+}
+.product.list-view .product__buttons button:hover {
+  background-color: var(--dark-gray);
+}
+
+.product.list-view .product__subtotal {
+  border-top: 1px solid var(--dark-gray);
+  padding-top: 0.5 rem;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: right;
+}
+
+.product__subtotal__text {
+  font-size: 0.75em;
+  padding-right: 0.5em;
+}
+
+.product.list-view .product__name,
+.product.list-view .product__price {
+  font-size: 1.5em;
+}
+
+.product.list-view .product__price {
+  font-size: 0.8em;
+}
+
+.product.list-view .product__remove {
+  margin-right: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .product {
+    flex-direction: row;
+  }
+
+  .product__container {
+    min-width: 30rem;
+  }
+
+  .product__image {
+    width: 8rem;
+    margin-right: 3em;
+    margin-left: 1em;
+    padding-bottom: 0;
+  }
+  .product.list-view .product__image {
+    width: 20%;
+  }
+}

@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+/* Global styles */
+
+:root {
+  --light-gray: rgb(235, 235, 235);
+  --medium-gray: gray;
+  --dark-gray: rgb(220, 220, 220);
+
+  --dark: #222;
+  --white: #fff;
+  --pink: rgb(239, 74, 141);
+
+  --button-border-color: var(--medium-gray);
+  --border-radius-m: 0.25rem;
+  font-size: 12px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media screen and (min-width: 320px) {
+  :root {
+    font-size: 14px;
+  }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (min-width: 480px) {
+  :root {
+    font-size: 16px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+html {
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+button {
+  padding: 0.75em 1em;
+  border-radius: var(--border-radius-m);
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid var(--button-border-color);
+}
+
+button svg {
+  display: block;
+}
+
+button:hover {
+  background-color: var(--light-gray);
+  cursor: pointer;
+}
+
+button:focus {
+  outline-color: var(--pink);
+}
+
+input,
+textarea,
+select,
+button {
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+.shopping-cart-is-open {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .hidden-xs {
+    display: none;
   }
 }

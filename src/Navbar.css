@@ -1,0 +1,18 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--light-gray);
+  margin-bottom: 2rem;
+}
+
+.navbar__header {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__wish-logo {
+  font-size: 2em;
+  margin-right: 1rem;
+  font-family: "Pacifico", cursive;
+}

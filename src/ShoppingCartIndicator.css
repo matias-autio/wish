@@ -1,0 +1,22 @@
+.shopping-cart-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border: 0;
+  border-radius: var(--border-radius-m);
+}
+.shopping-cart-indicator p {
+  font-weight: bold;
+  padding-right: 1em;
+}
+
+.shopping-cart-indicator:hover {
+  background-color: var(--dark-gray);
+}
+.shopping-cart-indicator:focus {
+  outline: none;
+}
+
+.shopping-cart-icon {
+  height: 3rem;
+}
