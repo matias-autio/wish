@@ -22,10 +22,10 @@ export default function ShoppingCart () {
       <div className='shopping-cart'>
         {/* <h2>Shopping cart</h2> */}
         <h2>Your cart total is {total} €.</h2>
-        <button onClick={toggleCart} className='shopping-cart__close'><FiX /></button>
+        <button type='button' onClick={toggleCart} className='shopping-cart__close'><FiX /></button>
         {/* Passing settings for Product */}
         {products && products.map(product => <Product key={product.id} settings={settings} details={product} />)}
-        <button disabled={!total} className='shopping-cart__checkout'>Checkout</button>
+        <button type='button' disabled={!total} className='shopping-cart__checkout'>Checkout</button>
       </div>
     </>
   )

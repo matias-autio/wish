@@ -45,11 +45,11 @@ export default function Product (props) {
               </div>
             </div>
             <div className='product__buttons'>
-              <button onClick={handleRemoveClick} className='product__remove'>
+              <button type='button' onClick={handleRemoveClick} className='product__remove'>
                 {details.quantity === 1 ? <FiTrash2 /> : <FiMinus />}
               </button>
               <div className='product__quantity'>{details.quantity}</div>
-              <button onClick={handleAddClick} className='product__add'><FiPlus /></button>
+              <button type='button' onClick={handleAddClick} className='product__add'><FiPlus /></button>
 
             </div>
             <div className='product__subtotal'>
@@ -76,7 +76,7 @@ export default function Product (props) {
           <div className='product__details'>
             <div className='product__description'>{details.description}</div>
             {/* <div className='product__quantity'>Quantity: {details.quantity}</div> */}
-            <button onClick={handleAddClick} className='product__add'>Add to cart</button>
+            <button type='button' onClick={handleAddClick} className='product__add'>Add to cart</button>
             {/* <button onClick={handleRemoveClick} className='product__remove'>Remove item</button> */}
           </div>
         </div>

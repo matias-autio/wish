@@ -7,25 +7,17 @@ export default function ShoppingCartIndicator (props) {
   const context = useContext(CartContext)
   const { toggleCart, numberOfItemsInCart } = context
 
-  // Conditional text based on number of items in cart
-  const indicatorText = _ => {
-    if (numberOfItemsInCart === 0) {
-      return 'No items in cart'
-    } else if (numberOfItemsInCart === 1) {
-      return '1 item in cart'
-    } else {
-      return `${numberOfItemsInCart} items in cart`
-    }
-  }
-
-  function handleOpenCartClick () {
-    toggleCart()
-  }
-
   return (
     <>
-      <button onClick={handleOpenCartClick} className='shopping-cart-indicator'>
-        <p>{indicatorText()}</p>
+      <button type='button' onClick={toggleCart} className='shopping-cart-indicator'>
+        <p>{
+          numberOfItemsInCart === 0
+            ? 'No items in cart'
+            : numberOfItemsInCart === 1
+              ? '1 item in cart'
+              : `${numberOfItemsInCart} items in cart`
+        }
+        </p>
         <img src={shoppingCartIcon} className='shopping-cart-icon' alt='shopping-cart-icon' />
       </button>
     </>
